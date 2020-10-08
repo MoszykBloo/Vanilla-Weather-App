@@ -1,3 +1,12 @@
 body {
-  color: red;
+  border: 1px solid rgba(245, 13, 187, 0.932);
+  max-width: 85%;
+  margin: 0 auto;
+  display: block;
+}
+
+.weather-app {
+  margin-top: 10%;
+  border: 2px solid rgb(163, 161, 161);
+  border-radius: 12px;
 }
