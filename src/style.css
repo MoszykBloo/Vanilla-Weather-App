@@ -19,8 +19,13 @@ body {
   padding: 15px;
 }
 
+.overview {
+  margin-bottom: 15px;
+}
+
 h1 {
-  font-size: 45px;
+  font-size: 50px;
+  margin-bottom: 0px;
 }
 
 ul {
@@ -30,4 +35,19 @@ ul {
 
 li {
   list-style: none;
+}
+
+.weather-temperature img {
+  margin-right: 15px;
+}
+
+.weather-temperature strong {
+  font-size: 55px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .degrees {
+  position: relative;
+  top: -30px;
 }
