@@ -6,12 +6,11 @@ body {
 
 .wrapper-app {
   border: 1px solid rgba(245, 13, 187, 0.932);
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
 .weather-app {
-  max-width: 650px;
   margin: 0px auto;
   margin-top: 7%;
   border: 2px solid rgb(163, 161, 161);
@@ -35,6 +34,7 @@ ul {
 
 li {
   list-style: none;
+  text-transform: capitalize;
 }
 
 .weather-temperature img {
