@@ -12,35 +12,49 @@
 <body>
     <div class="container">
         <div class="wrapper-app">
-        <div class="weather-app">
-            <div class="overview">
-        <h1 id="city"></h1>
-        <ul>
-            <li id="date"></li>
-            <li id="description"></li>
-        </ul>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="clearfix weather-temperature">
-                    <img src="" alt="" class="float-left" id="icon">
-                        <div class="float-left">
-                            <strong id="temperature"></strong><span class="degrees">ºC | <a href="#">ºF</a></span>
+            <div class="weather-app">
+                <form id="search-form" class="mb-3">
+                    <div class="row">
+                        <div class="col-9">
+                            <input 
+                                type="search"
+                                placeholder="Enter a city"
+                                class="form-control"
+                                id="city-input"/>
                         </div>
+                        <div class="col-3">
+                            <input type="submit" value="Search" class="btn btn-primary w-100"/>
+                        </div>
+                    </div>
+                </form>
+                <div class="overview">
+                    <h1 id="city"></h1>
+                    <ul>
+                        <li id="date"></li>
+                        <li id="description"></li>
+                    </ul>
+                </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="clearfix weather-temperature">
+                        <img src="" alt="" class="float-left" id="icon">
+                            <div class="float-left">
+                                <strong id="temperature"></strong><span class="degrees">ºC | <a href="#">ºF</a></span>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>Feels like: <span id="sensation"></span>%</li>
+                        <li>Humidity <span id="humidity"></span>%</li>
+                        <li>Wind: <span id="wind"></span> km/h</li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-6">
-                <ul>
-                    <li>Feels like: <span id="sensation"></span>%</li>
-                    <li>Humidity <span id="humidity"></span>%</li>
-                    <li>Wind: <span id="wind"></span> km/h</li>
-                </ul>
             </div>
-        </div>
-        </div>
-        <small>
-        <a href="https://github.com/MoszykBloo/Vanilla-Weather-App" target="blank">Open source code</a> by Monica Camacho
-        </small>
+            <small>
+                <a href="https://github.com/MoszykBloo/Vanilla-Weather-App" target="blank">Open source code</a> by Monica Camacho
+            </small>
         </div>
     </div>
 <script src="src/index.js"></script>
