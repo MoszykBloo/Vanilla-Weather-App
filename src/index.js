@@ -48,7 +48,7 @@ function showTemperature(response){
 }
 
 let apiKey = "3e43755f9b9e49aaa25fe2da226ada2b";
-let city = "san lorenzo tezonco";
+let city = "mexico";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 
