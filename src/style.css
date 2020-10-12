@@ -60,3 +60,28 @@ li {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+.row #forecast-weather {
+  margin: 10px 10px 10px 10px;
+}
+
+.col-2 {
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  max-width: 114px;
+}
+
+.col-2:hover {
+  border-radius: 12px;
+  background-color: rgb(245, 240, 240);
+}
+
+.day-icon {
+  margin: 0 auto;
+  display: block;
+}
+
+.day-temp {
+  text-align: center;
+}

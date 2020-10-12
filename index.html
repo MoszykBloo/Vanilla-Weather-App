@@ -27,34 +27,80 @@
                         </div>
                     </div>
                 </form>
-                <div class="overview">
-                    <h1 id="city"></h1>
-                    <ul>
-                        <li id="date"></li>
-                        <li id="description"></li>
-                    </ul>
-                </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="clearfix weather-temperature">
-                        <img src="" alt="" class="float-left" id="icon">
-                            <div class="float-left">
-                                <strong id="temperature"></strong>
-                                    <span class="degrees">
-                                        <a href="#" id="celsius-link" class="active">ºC</a> | 
-                                        <a href="#" id="fahrenheit-link">ºF</a>
-                                    </span>
-                            </div>
+                <div class="col-4" id="current-info">
+                    <div class="overview">
+                        <h1 id="city"></h1>
+                        <ul>
+                            <li id="date"></li>
+                            <li id="description"></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-6">
-                    <ul>
-                        <li>Feels like: <span id="sensation"></span>%</li>
-                        <li>Humidity <span id="humidity"></span>%</li>
-                        <li>Wind: <span id="wind"></span> km/h</li>
-                    </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="clearfix weather-temperature">
+                            <img src="" alt="" class="float-left" id="icon">
+                                <div class="float-left">
+                                    <strong id="temperature"></strong>
+                                        <span class="degrees">
+                                            <a href="#" id="celsius-link" class="active">ºC</a> | 
+                                            <a href="#" id="fahrenheit-link">ºF</a>
+                                        </span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>Feels like: <span id="sensation"></span>%</li>
+                            <li>Humidity <span id="humidity"></span>%</li>
+                            <li>Wind: <span id="wind"></span> km/h</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <div class="row" id="forecast-weather">
+                    <div class="col-2">
+                        <h4 class="day">Tue</h4>
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" class="day-icon">
+                        <div class="forecast-temperature">
+                            <h6 class="day-temp"> 16º | <span class="forecast-degrees">25º</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="day">Wed</h4>
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" class="day-icon">
+                        <div class="forecast-temperature">
+                            <h6 class="day-temp"> 16º | <span class="forecast-degrees">25º</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="day">Thu</h4>
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" class="day-icon">
+                        <div class="forecast-temperature">
+                            <h6 class="day-temp"> 16º | <span class="forecast-degrees">25º</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="day">Fri</h4>
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" class="day-icon">
+                        <div class="forecast-temperature">
+                            <h6 class="day-temp"> 16º | <span class="forecast-degrees">25º</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="day">Sat</h4>
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" class="day-icon">
+                        <div class="forecast-temperature">
+                            <h6 class="day-temp"> 16º | <span class="forecast-degrees">25º</span></h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="day">Sun</h4>
+                        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" class="day-icon">
+                        <div class="forecast-temperature">
+                            <h6 class="day-temp"> 16º | <span class="forecast-degrees">25º</span></h6>
+                        </div>
+                    </div>
+                </div>
             </div>
             <small>
                 <a href="https://github.com/MoszykBloo/Vanilla-Weather-App" target="blank">Open source code</a> by Monica Camacho
