@@ -54,9 +54,12 @@ function showTemperature(response){
 
 function showForecast(response){
     let forecastElement = document.querySelector("#forecast-weather");
-    let forecast = response.data.list[0];
-    console.log(forecast);
-    forecastElement.innerHTML = `
+    forecastElement.innerHTML = null;
+    let forecast = null;
+    
+    for (let index = 0; index < 6; index++) {
+        forecast = response.data.list[index];
+        forecastElement.innerHTML += `
         <div class="col-2">
             <h5 class="day">${formatTime(forecast.dt * 1000)}</h5>
             <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
@@ -68,8 +71,7 @@ function showForecast(response){
             </div>
         </div>
     `
-
-
+    }
 }
 
 function search(city){
