@@ -1,13 +1,5 @@
 function formatDate(timestamp){
     let date = new Date(timestamp);
-    let hours = date.getHours();
-        if(hours < 10){
-            hours = `0${hours}`;
-            }
-    let minutes = date.getMinutes();
-        if(minutes < 10){
-            minutes = `0${minutes}`;
-            }
     let days = [
         "Sunday",
         "Monday",
@@ -19,8 +11,20 @@ function formatDate(timestamp){
     ];
     let day = days[date.getDay()];
 
-    return `${day} ${hours}:${minutes}`;
+    return `${day} ${formatTime(timestamp)}`;
+}
 
+function formatTime(timestamp){
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+        if(hours < 10){
+            hours = `0${hours}`;
+            }
+    let minutes = date.getMinutes();
+        if(minutes < 10){
+            minutes = `0${minutes}`;
+            }
+    return `${hours}:${minutes}`;
 }
 
 function showTemperature(response){
@@ -48,11 +52,33 @@ function showTemperature(response){
         );
 }
 
+function showForecast(response){
+    let forecastElement = document.querySelector("#forecast-weather");
+    let forecast = response.data.list[0];
+    console.log(forecast);
+    forecastElement.innerHTML = `
+        <div class="col-2">
+            <h5 class="day">${formatTime(forecast.dt * 1000)}</h5>
+            <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                class="day-icon">
+            <div class="forecast-temperature">
+                <h6 class="day-temp"> ${Math.round(forecast.main.temp_max)}º | 
+                    <span class="forecast-degrees">${Math.round(forecast.main.temp_min)}º</span>
+                </h6>
+            </div>
+        </div>
+    `
+
+
+}
+
 function search(city){
     let apiKey = "3e43755f9b9e49aaa25fe2da226ada2b";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
     axios.get(apiUrl).then(showTemperature);
+
+    apiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(showForecast);
 }
 
 function submiting(event){
